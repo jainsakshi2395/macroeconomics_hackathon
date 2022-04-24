@@ -92,6 +92,47 @@ public class DatabaseAccess {
 
     }
 
+    public List<String> getGDPIndia() {
+        List<String> growthIndiaList = new ArrayList<>();
+
+
+        String [] tableColumns = {COLUMN_INDIA};
+
+        Cursor cursor = database.query(false, GDP_GROWTH_TABLE,tableColumns,null,null,null,null,null,null);
+        //Cursor cursor = database.rawQuery("SELECT year FROM gdp_growth", null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            growthIndiaList.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+
+
+        cursor.close();
+        return growthIndiaList;
+
+    }
+
+    public List<String> getGDPChina() {
+        List<String> growthChinaList = new ArrayList<>();
+
+
+        String [] tableColumns = {COLUMN_CHINA};
+
+        Cursor cursor = database.query(false, GDP_GROWTH_TABLE,tableColumns,null,null,null,null,null,null);
+        //Cursor cursor = database.rawQuery("SELECT year FROM gdp_growth", null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            growthChinaList.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+
+
+        cursor.close();
+        return growthChinaList;
+
+    }
 
 
 

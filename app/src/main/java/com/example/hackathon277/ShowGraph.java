@@ -19,7 +19,7 @@ public class ShowGraph extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.showgraph);
 
-        // this.listView = (ListView) findViewById(R.id.listView);
+      /*
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
         List<String> quotes = databaseAccess.getGDPGrowthYear();
@@ -51,8 +51,7 @@ public class ShowGraph extends AppCompatActivity {
 
         databaseAccess.close();
 
-        //  ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, quotes);
-        // this.listView.setAdapter(adapter);
+       */
 
 
     }
