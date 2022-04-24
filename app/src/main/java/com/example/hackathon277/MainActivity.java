@@ -2,11 +2,15 @@ package com.example.hackathon277;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import com.example.hackathon277.database.DatabaseAccess;
 import com.jjoe64.graphview.GraphView;
@@ -21,13 +25,29 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
     GraphView graphView;
+    Button getStartedBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // this.listView = (ListView) findViewById(R.id.listView);
+        Spinner spinnerCountry = findViewById(R.id.country);
+        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.country, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        spinnerCountry.setAdapter(adapter);
+
+        getStartedBtn = (Button) findViewById(R.id.GetStartedBtn);
+        //OnclickListener implementation to change the activity
+        getStartedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                startActivity(intent);
+            }
+        });
+
+      /* // this.listView = (ListView) findViewById(R.id.listView);
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
         List<String> quotes = databaseAccess.getGDPGrowthYear();
@@ -58,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         graphView.addSeries(series);
 
         databaseAccess.close();
-
+*/
       //  ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, quotes);
        // this.listView.setAdapter(adapter);
     }

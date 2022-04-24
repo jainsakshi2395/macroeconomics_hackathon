@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hackathon277">
+        <activity android:name=".Dashboard"></activity>
+        <activity android:name=".ShowGraph"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
