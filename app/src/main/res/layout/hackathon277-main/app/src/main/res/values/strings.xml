@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Macroeconomic Researcher Food Security Time Series Dashboard</string>
+    <string-array name="country">
+        <item>China</item>
+        <item>USA</item>
+        <item>India</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
