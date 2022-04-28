@@ -6,37 +6,74 @@
     tools:context=".Fragment_Agri">
 
     <!-- TODO: Update blank fragment layout -->
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="540dp">
+<!--    <RadioGroup-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="540dp">-->
 
-        <RadioButton
-            android:id="@+id/radio_1"
+<!--        <RadioButton-->
+<!--            android:id="@+id/radio_1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onRadioButtonClicked"-->
+<!--            android:text="GDP (USD)" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radio_2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onRadioButtonClicked"-->
+<!--            android:text="FDI Inflows (USD)" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radio_3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onRadioButtonClicked"-->
+<!--            android:text="FDI Outflows (USD)" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radio_4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onRadioButtonClicked"-->
+<!--            android:text="Import/Export Flow" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/show"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="SHOW"-->
+<!--            android:onClick="show_graph"-->
+<!--            android:textSize="22dp"-->
+<!--            android:backgroundTint="@color/teal_200"-->
+<!--            android:layout_marginTop="50dp"/>-->
+<!--    </RadioGroup>-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <CheckBox android:id="@+id/check1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="GDP (USD)" />
-
-        <RadioButton
-            android:id="@+id/radio_2"
+            android:text="GDP (USD)"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/check2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="FDI Inflows (USD)" />
-
-        <RadioButton
-            android:id="@+id/radio_3"
+            android:text="FDI Inflows (USD)"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/check3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="FDI Outflows (USD)" />
-
-        <RadioButton
-            android:id="@+id/radio_4"
+            android:text="FDI Outflows (USD)"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/check4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Import/Export Flow" />
+            android:text="Import/Export Flow"
+            android:onClick="onCheckboxClicked"/>
+
 
         <Button
             android:id="@+id/show"
@@ -45,7 +82,8 @@
             android:text="SHOW"
             android:onClick="show_graph"
             android:textSize="22dp"
+            android:backgroundTint="@color/teal_200"
             android:layout_marginTop="50dp"/>
-    </RadioGroup>
+    </LinearLayout>
 
 </FrameLayout>

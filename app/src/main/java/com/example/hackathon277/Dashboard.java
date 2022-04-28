@@ -146,7 +146,7 @@ public class Dashboard extends AppCompatActivity {
                 gridLabel1.setVerticalAxisTitle("USD");
 
                 series1.setColor(Color.rgb(255,0,0));
-                series2.setColor(Color.rgb(0,10,50));
+                series2.setColor(Color.rgb(255,255,0));
                 graphView.addSeries(series1);
                 graphView.addSeries(series2);
                 graphView.addSeries(series3);
